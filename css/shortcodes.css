@@ -311,7 +311,7 @@ padding: 75px 0px 40px;
 /* banner section  */
 .prt-titlebar-wrapper.prt-bg.prt-bgimage-yes {
   background-image: url('../images/titlebar-img.jpg');
-  background-position: center center;
+  background-position: center 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;

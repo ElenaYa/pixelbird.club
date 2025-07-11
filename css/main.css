@@ -1057,14 +1057,12 @@ transform: translateY(0px) ;
 }
 .client-section .featured-box-client .featured-item-thumbnail-inner:hover img {
   filter:grayscale(0%);
-  opacity:1;
-  	filter: brightness(0) invert(1)
+
 }
 .client-section .featured-box-client .featured-item-thumbnail-inner img {
   filter:grayscale(100%);
   -webkit-filter:grayscale(0%);
-  opacity:.3;
-  	filter: brightness(0) invert(1)
+  
 }
 .client-section .featured-box-client .featured-box-client {
   margin:44px 0;
