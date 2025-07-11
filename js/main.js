@@ -334,9 +334,13 @@ $(document).ready(function () {
                 
                 // Dropdown Fade Toggle
                 $("a.mega-menu-link", this).on('click', function (e) {
-                    e.preventDefault();
                     var t = $(this);
-                    t.toggleClass('active').next('ul').toggleClass('active');
+                    var hasSubmenu = t.next('ul').length > 0;
+                    
+                    if (hasSubmenu) {
+                        e.preventDefault();
+                        t.toggleClass('active').next('ul').toggleClass('active');
+                    }
                 });   
 
                 // Megamenu style
@@ -363,8 +367,14 @@ $(document).ready(function () {
 $('.btn-show-menu-mobile').on('click', function(e){
     $(this).toggleClass('is-active'); 
     $('.menu-mobile').toggleClass('show'); 
+    e.preventDefault();
     return false;
-    e.preventDefault();  
+});
+
+// Close mobile menu when clicking on a link
+$(document).on('click', '.menu-mobile a', function(e){
+    $('.btn-show-menu-mobile').removeClass('is-active'); 
+    $('.menu-mobile').removeClass('show'); 
 });
 
 // Initialize

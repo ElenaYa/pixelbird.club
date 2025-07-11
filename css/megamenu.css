@@ -359,17 +359,21 @@ nav.main-menu ul.menu li ul.mega-submenu li:hover a {
     display: none;
     max-height: 10000px;
     box-shadow: 0 0 10px 0 rgba(0, 43, 92, 0.08);
-    z-index: 100;
+    z-index: 9999;
     top: 100%;
     left: 0;
     border-top-width: 3px;
     border-top-style: solid;
     border-top-color: var(--base-skin);
+    position: absolute;
+    width: 100%;
+    background-color: var(--base-dark);
   }
   nav.main-menu.show {
     display: block !important;
     max-height: 10000px;
     top: 54px;
+    width: 100%;
   }
   #menu {
     padding-top: 10px;
@@ -391,6 +395,16 @@ nav.main-menu ul.menu li ul.mega-submenu li:hover a {
     transition: 0.4s;
     color: var(--base-white);
     text-transform: capitalize;
+    pointer-events: auto;
+  }
+  nav.main-menu ul.menu > li > a.active,
+  nav.main-menu ul.menu > li > a.active-link {
+    color: var(--base-secondary-color);
+    background-color: rgba(50, 166, 250, 0.1);
+  }
+  nav.main-menu ul.menu > li > a:hover {
+    color: var(--base-secondary-color);
+    background-color: rgba(255, 255, 255, 0.05);
   }
   nav.main-menu ul.menu > li:first-child > a {
     border-top: none;
@@ -400,7 +414,7 @@ nav.main-menu ul.menu li ul.mega-submenu li:hover a {
     color: var(--base-secondary-color);
     transition: .5s;
   }
-  nav.main-menu
+  /* nav.main-menu
     ul.menu
     > li.mega-menu-item:first-child
     > .nav-first-link::after,
@@ -415,7 +429,7 @@ nav.main-menu ul.menu li ul.mega-submenu li:hover a {
     margin-left: 10px;
     top: 0;
     content: "\f116";
-  }
+  } */
   nav.main-menu
     .mega-menu-item
     .megamenu-content

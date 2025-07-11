@@ -46,43 +46,19 @@
                                     <!-- menu -->
                                     <nav class="main-menu menu-mobile" id="menu">
                                         <ul class="menu">
-                                            <li class="mega-menu-item">
-                                                <a class="nav-first-link mega-menu-link" href="index.html"></a>
-                                                <ul class="mega-submenu">
-                                                    <li><a href="#"><span class="hover-text text-hover-effect body-text">Мобільні ігри</span></a></li>
-                                                    <li><a href="#"><span class="hover-text text-hover-effect body-text">Піксель-арт</span></a>
-                                                    </li>
-                                                    <li><a href="#"><span class="hover-text text-hover-effect body-text">Android розробка</span></a></li>
-                                                    <li><a href="#"><span class="hover-text text-hover-effect body-text">iOS розробка</span></a>
-                                                    </li>
-                                                    <li><a href="#"><span class="hover-text text-hover-effect body-text">Геймдизайн</span></a></li>
-                                                    <li><a href="#"><span class="hover-text text-hover-effect body-text">Unity навчання</span></a></li>
-                                                </ul>
+                                           
+                                                                                        <li class="mega-menu-item">
+                                                <a href="index.html" class="mega-menu-link">Головна</a>
                                             </li>
                                             <li class="mega-menu-item">
-                                                <a href="#" class="active mega-menu-link">Сторінки</a>
-                                                <ul class="mega-submenu">
-                                                    <li><a href="about.html"><span>Про школу</span></a></li>
-                                                    <li><a href="contact.html" class="active-link"><span>Контакти</span></a></li>
-                                                    <li><a href="team.html"><span>Наша команда</span></a></li>
-                                                    <li><a href="team-detail.html"><span>Ментори</span></a></li>
-                                                    <li><a href="faq.html"><span>Поширені питання</span></a>
-                                                    </li>
-                                                    <li><a href="error.html"><span>404 сторінка</span></a>
-                                                    </li>
-                                                </ul>
+                                                <a href="service.html" class="mega-menu-link">Платформа</a>
+                                            </li>
+                                           
+                                            <li class="mega-menu-item">
+                                                <a href="about.html" class="mega-menu-link">Про школу</a>
                                             </li>
                                             <li class="mega-menu-item">
-                                                <a href="service.html" class="mega-menu-link">курси</a>
-                                            </li>
-                                            <li class="mega-menu-item">
-                                                <a href="portfolio.html" class="mega-menu-link">портфоліо</a>
-                                            </li>
-                                            <li class="mega-menu-item">
-                                                <a href="blog.html" class="mega-menu-link">блог</a>
-                                            </li>
-                                            <li class="mega-menu-item">
-                                                <a href="contact.html" class="active mega-menu-link">зв'язатись</a>
+                                                <a href="contact.html" class="active mega-menu-link active-link">зв'язатись</a>
                                             </li>
                                         </ul>
                                     </nav>
@@ -133,7 +109,7 @@
             <div class="container">
                 <div class="grid px-[20px] py-[30px] md:py-[40px] md:px-[20px] lg:p-[50px] w-full md:grid-cols-[60%_40%] lg:grid-cols-[58.33%_41.66%]  bg-base-dark rounded-[20px]">
                     <div class="contact-form  mb-[40px] md:mb-[0px] pr-[0px] md:pr-[30px] lg:pr-[50px]">
-                        <form action="#">
+                        <form id="contact-form" action="#">
                             <div class="flex items-start justify-between">
                                 <div class="section-title style9">
                                     <div class="title-header">
@@ -145,28 +121,30 @@
                             <div class="grid grid-cols-6 gap-[20px]">
                                 <div class="contact-form-field border-1 border-rad_10 contact-form-input col-span-6 sm:col-span-3">
                                     <i class="icon-user"></i>
-                                    <input type="text" name="category" id="category" class="bg-transparent block shadow-sm px-[15px] py-[14px] w-full " placeholder="Ім'я" required="required">
+                                    <input type="text" name="name" id="name" class="bg-transparent block shadow-sm px-[15px] py-[14px] w-full " placeholder="Введіть ваше ім'я" required="required">
                                 </div>
                                 <div class="contact-form-field border-1 border-rad_10 contact-form-input col-span-6 sm:col-span-3">
                                     <i class="icon-mail"></i>
-                                    <input type="email" name="category" id="Email" class="bg-transparent block shadow-sm px-[15px] py-[14px] w-full " placeholder="Електронна пошта" required="required">
+                                    <input type="email" name="email" id="email" class="bg-transparent block shadow-sm px-[15px] py-[14px] w-full " placeholder="example@email.com" required="required">
                                 </div>
                                 <div class="contact-form-field border-1 border-rad_10 col-span-6 sm:col-span-3 mb-[20px]">
                                     <i class="icon-phone"></i>
-                                    <input type="text" name="brand" id="brand" class="bg-transparent block shadow-sm px-[15px] py-[14px] w-full " placeholder="Телефон" required="required">
+                                    <input type="tel" name="phone" id="phone" class="bg-transparent block shadow-sm px-[15px] py-[14px] w-full " placeholder="+380 XX XXX XX XX" required="required">
                                 </div>
                                 <div class="contact-form-field border-1 border-rad_10 col-span-6 sm:col-span-3 mb-[20px]">
                                     <i class="icon-location-2"></i>
-                                    <input type="text" name="price" id="price" class="bg-transparent block shadow-sm px-[15px] py-[14px] w-full " placeholder="Місто" required="required">
+                                    <input type="text" name="city" id="city" class="bg-transparent block shadow-sm px-[15px] py-[14px] w-full " placeholder="Введіть ваше місто" required="required">
                                 </div>
                             </div>
                             <div class="contact-form-field grid-cols-12 mb-[30px] lg:mb-[40px] border-1 border-rad_10">
                                 <i class="flaticon-chat-bubble"></i>
-                                <textarea id="product-details" rows="6" class="bg-transparent block sm:text-sm px-[15px] py-[14px] " placeholder="Повідомлення" required="required"></textarea>
+                                <textarea name="message" id="message" rows="6" class="bg-transparent block sm:text-sm px-[15px] py-[14px] " placeholder="Розкажіть про ваші цілі в геймдеві та що вас цікавить..." required="required"></textarea>
                             </div>
-                            <button type="submit" class="prt-btn prt-btn-color-gradientcolor prt-btn-size-sm  prt-btn-shape-round">
-                                надіслати повідомлення
-                            </button>
+                            <div class="text-center">
+                                <button type="submit" id="submit-btn" class="prt-btn prt-btn-color-gradientcolor prt-btn-size-sm  prt-btn-shape-round">
+                                    надіслати повідомлення
+                                </button>
+                            </div>
                         </form>
                     </div>
                     <div class="pl-[0px] md:pl-[20px] lg:pl-[50px]">
@@ -185,8 +163,8 @@
                                 <div>
                                     <div class="fs-18 text-base-white pb-[15px]">Адреса офісу</div>
                                     <div class="fs-16 text-base-gray">
-                                        м. Київ, вул. Володимирська, 40<br>
-                                        офіс 404, 01001, Україна
+                                        <a href="https://maps.app.goo.gl/A85bz5SNw3j1EiP9A" target="_blank">м. Київ, вул. Володимирська, 40<br>
+                                        офіс 404, 01001, Україна</a>
                                     </div>
                                 </div>
 
@@ -198,10 +176,6 @@
         </section>
         <!-- section 1 - contact form end -->
 
-        <!-- section 2 -  start -->
-        <iframe loading="lazy" class=" h-[400px] md:h-[450px] lg:h-[690px]" src="https://maps.google.com/maps?q=Київ%2C%20Україна&t=m&z=15&output=embed&iwloc=near" title="Київ, Україна" aria-label="Київ, Україна"></iframe>
-        <!-- section 2 -  end -->
-
         
         <!-- section 2 -  start-->
         <section class="prt-row">
@@ -210,9 +184,9 @@
                     <div class="title-header">
                         <div>
                             <div class="title text-base-white">
-                                <div class="fs-45 line-mask text-center">
-                                    <span class="line">Без вагань! Поширені</span><br>
-                                     <span class="line">запитання</span>
+                                <div class="fs-45 text-center">
+                                    <span>Без вагань! Поширені</span><br>
+                                     <span>запитання</span>
                                 </div> 
                             </div>
                         </div>
@@ -223,38 +197,38 @@
                     <div class="accordion style1">
                         <!-- toggle -->
                         <div class="toggle prt-toggle_style_classic prt-control-right-true text-base-white">
-                            <div class="toggle-title"><a href="#" class="active text-base-white">Як зв'язатися з підтримкою студентів?</a></div>
+                            <div class="toggle-title"><a href="#" class="active text-base-white">Як відстежувати свій прогрес навчання?</a></div>
                             <div class="toggle-content show" >
-                                <p>Ти можеш зв'язатися з нашою командою підтримки через Telegram, електронну пошту або телефон. Наші ментори завжди готові допомогти з питаннями навчання та технічними проблемами. Також у нас є активна спільнота студентів, де можна знайти відповіді на поширені питання.</p>
+                                <p>На нашій платформі є зручна система відстеження прогресу. Ти можеш бачити пройдені уроки, виконані завдання та отримані досягнення. Система показує твій рівень майстерності та рекомендує наступні кроки для розвитку.</p>
                             </div>
                         </div><!-- toggle end -->
                         <!-- toggle -->
                         <div class="toggle prt-toggle_style_classic prt-control-right-true ">
-                            <div class="toggle-title text-base-white"><a href="#">Чи надаєте ви сертифікати після завершення курсу?</a></div>
+                            <div class="toggle-title text-base-white"><a href="#">Що таке Ігрові Виклики і як вони працюють?</a></div>
                             <div class="toggle-content" >
-                                <p>Так, після успішного завершення курсу та створення фінального проекту ти отримаєш сертифікат від Піксельного Птаха. Цей сертифікат підтверджує твої навички в розробці мобільних ігор та може бути корисним при пошуку роботи в індустрії геймдеву.</p>
+                                <p>Ігрові Виклики - це практичні завдання, де ти створюєш міні-ігри за певний час. Це допомагає закріпити навички та отримати зворотній зв'язок від менторів. Найкращі роботи публікуються в галереї досягнень студентів.</p>
                             </div>
                         </div><!-- toggle end -->
                         <!-- toggle -->
                         <div class="toggle prt-toggle_style_classic prt-control-right-true">
-                            <div class="toggle-title text-base-white"><a href="#">Які способи оплати ви приймаєте?</a>
+                            <div class="toggle-title text-base-white"><a href="#">Як приєднатися до спільноти розробників?</a>
                             </div>
                             <div class="toggle-content" >
-                                <p>Ми приймаємо оплату банківськими картами, через PayPal, банківський переказ та криптовалюти. Також доступна можливість оплати частинами. Для студентів та пенсіонерів діють спеціальні знижки. Зв'яжися з нами для обговорення зручного способу оплати.</p>
-                            </div>
-                        </div><!-- toggle end -->
-                        <!-- toggle -->
-                        <div class="toggle prt-toggle_style_classic prt-control-right-true">
-                            <div class="toggle-title text-base-white"><a href="#">Як змінити пароль до особистого кабінету?</a></div>
-                            <div class="toggle-content" >
-                                <p>Для зміни пароля увійди до свого особистого кабінету, перейди в розділ "Налаштування профілю" та натисни "Змінити пароль". Якщо ти забув поточний пароль, скористайся функцією "Забули пароль?" на сторінці входу - ми надішлемо інструкції на твою електронну пошту.</p>
+                                <p>Наша спільнота об'єднує початківців та досвідчених розробників. У Discord-каналі ти можеш спілкуватися з іншими учасниками, ділитися досвідом, шукати команду для проектів та отримувати допомогу від менторів.</p>
                             </div>
                         </div><!-- toggle end -->
                         <!-- toggle -->
                         <div class="toggle prt-toggle_style_classic prt-control-right-true">
-                            <div class="toggle-title text-base-white"><a href="#">Де можна дізнатися більше інформації про школу?</a></div>
+                            <div class="toggle-title text-base-white"><a href="#">Які інструменти потрібні для навчання?</a></div>
                             <div class="toggle-content" >
-                                <p>Детальну інформацію про наші курси, методики навчання та команду ти можеш знайти на нашому веб-сайті, у соціальних мережах (Instagram, Telegram) та YouTube-каналі. Також рекомендуємо переглянути відгуки наших випускників та приєднатися до безкоштовних вебінарів.</p>
+                                <p>Для початку навчання достатньо мати комп'ютер з інтернетом. Ми використовуємо Unity для розробки, Aseprite для піксель-арту та Android Studio/Xcode для мобільної розробки. Всі необхідні інструкції з налаштування надаються на початку курсу.</p>
+                            </div>
+                        </div><!-- toggle end -->
+                        <!-- toggle -->
+                        <div class="toggle prt-toggle_style_classic prt-control-right-true">
+                            <div class="toggle-title text-base-white"><a href="#">Як працює система досягнень?</a></div>
+                            <div class="toggle-content" >
+                                <p>За кожен пройдений етап навчання ти отримуєш бейджі та досягнення. Це показує твій прогрес у різних напрямках: програмування, дизайн, публікація ігор. Досягнення відкривають доступ до додаткових матеріалів та можливостей на платформі.</p>
                             </div>
                         </div><!-- toggle end -->
                     </div>
@@ -266,6 +240,20 @@
   
     </div>
     <!-- site main end -->
+
+    <!-- Success Modal -->
+    <div id="success-modal" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 9999; display: none; align-items: center; justify-content: center;">
+        <div style="background-color: #1a1a1a; border-radius: 20px; padding: 40px; max-width: 500px; margin: 0 20px; text-align: center;">
+            <div style="margin-bottom: 30px;">
+                <i class="flaticon-check" style="font-size: 60px; color: #10b981;"></i>
+            </div>
+            <h3 style="font-size: 24px; color: white; margin-bottom: 20px;">Дякуємо за повідомлення!</h3>
+            <p style="color: #9ca3af; margin-bottom: 30px;">Ми отримали ваше повідомлення і зв'яжемося з вами найближчим часом.</p>
+            <button id="close-modal" class="prt-btn prt-btn-color-gradientcolor prt-btn-size-sm prt-btn-shape-round">
+                Закрити
+            </button>
+        </div>
+    </div>
 
     <!-- footer start -->
     <footer class="site-footer">
@@ -282,12 +270,8 @@
                                             <aside class="widget_text widget widget_custom_html">
                                                 <div class="textwidget custom-html-widget">
                                                    <div class="footer-left-contact title fs-34 text-base-white">
-                                                        <div class="line-mask">
-                                                            <div class="line">Почнемо разом, більше </div>
-                                                        </div>
-                                                        <div class="line-mask">
-                                                            <div class="line"> інформації та підтримки</div>
-                                                        </div>
+                                                        <div>Почнемо разом, більше </div>
+                                                        <div> інформації та підтримки</div>
                                                     </div>
                                                 </div>
                                             </aside>
@@ -332,11 +316,14 @@
                                                 <h3 class="widget-title">Швидкі посилання</h3>
                                                 <div class="menu-quick-link-container">
                                                     <ul id="menu-quick-link-1" class="menu">
+                                                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8936">
+                                                            <a href="index.html">Головна</a>
+                                                        </li>
                                                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8936">
                                                             <a href="about.html">Про школу</a>
                                                         </li>
                                                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8937">
-                                                            <a href="service.html">Курси</a>
+                                                            <a href="service.html">Платформа</a>
                                                         </li>
                                                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8938">
                                                             <a href="contact.html">Контакти</a>
@@ -347,19 +334,7 @@
                                         </div>
                                         <div class="widget-area mt-[20px] lg:mt-[0px] w-full md:w-1/2 lg:w-1/4">
                                             <aside class="widget_text widget widget_custom_html">
-                                                <h3 class="widget-title">Наша розсилка</h3>
-                                                <div class="textwidget custom-html-widget">
-                                                    <p> Підписуйся на останні новини та статті.</p>
-                                                    <form method="post" data-id="7407" data-name="form">
-                                                        <div>
-                                                            <div class="mailchimp-inputbox">
-                                                                <div class="relative"><input type="email" name="EMAIL" placeholder="Електронна пошта" required="">
-                                                                    <button class="btn absolute right-0 cursor-pointer" type="submit"> <i class="icon-paper-plane"></i></button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-                                                </div>
+                                               <img src="images/logo.png" alt="Піксельний Птах логотип" style="max-width: 150px; height: auto; display: block; margin-left: auto; margin-right: auto;">
                                             </aside>
                                         </div>
                                     </div>
@@ -391,9 +366,110 @@
 
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/jquery-migrate-3.3.2.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/gsap.min.js"></script>
     <script src="js/Scrolltrigger.js"></script>
     <script src="js/main.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            console.log('Script loaded');
+            
+            // Form submission
+            $('#contact-form').on('submit', function(e) {
+                e.preventDefault();
+                console.log('Form submitted');
+                
+                // Get form data
+                var formData = {
+                    name: $('#name').val(),
+                    email: $('#email').val(),
+                    phone: $('#phone').val(),
+                    city: $('#city').val(),
+                    message: $('#message').val()
+                };
+                
+                console.log('Form data:', formData);
+                
+                // Simple validation
+                if (!formData.name || !formData.email || !formData.phone || !formData.city || !formData.message) {
+                    alert('Будь ласка, заповніть всі поля');
+                    return;
+                }
+                
+                // Email validation
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(formData.email)) {
+                    alert('Будь ласка, введіть коректну електронну пошту');
+                    return;
+                }
+                
+                // Phone validation
+                var phoneRegex = /^\+380\s?\d{2}\s?\d{3}\s?\d{2}\s?\d{2}$/;
+                if (!phoneRegex.test(formData.phone.replace(/\s/g, ''))) {
+                    alert('Будь ласка, введіть коректний номер телефону у форматі +380 XX XXX XX XX');
+                    return;
+                }
+                
+                // City validation
+                if (formData.city.length < 2) {
+                    alert('Будь ласка, введіть коректну назву міста (мінімум 2 символи)');
+                    return;
+                }
+                
+                // Check for valid city name (letters, spaces, hyphens, apostrophes)
+                var cityRegex = /^[а-яА-ЯіІїЇєЄ\s\-']+$/;
+                if (!cityRegex.test(formData.city)) {
+                    alert('Будь ласка, введіть коректну назву міста (тільки українські літери, пробіли, дефіси та апострофи)');
+                    return;
+                }
+                
+                console.log('Validation passed, showing modal');
+                
+                // Show success modal
+                $('#success-modal').css('display', 'flex');
+                console.log('Modal should be visible now');
+                
+                // Reset form
+                $('#contact-form')[0].reset();
+            });
+            
+            // Close modal
+            $('#close-modal').on('click', function() {
+                $('#success-modal').css('display', 'none');
+            });
+            
+            $('#success-modal').on('click', function(e) {
+                if (e.target === this) {
+                    $('#success-modal').css('display', 'none');
+                }
+            });
+            
+            // Phone input formatting
+            $('#phone').on('input', function() {
+                var value = $(this).val().replace(/\D/g, '');
+                if (value.length > 0 && !value.startsWith('380')) {
+                    value = '380' + value;
+                }
+                if (value.length > 0) {
+                    value = '+' + value;
+                }
+                if (value.length > 4) {
+                    value = value.substring(0, 4) + ' ' + value.substring(4);
+                }
+                if (value.length > 8) {
+                    value = value.substring(0, 8) + ' ' + value.substring(8);
+                }
+                if (value.length > 12) {
+                    value = value.substring(0, 12) + ' ' + value.substring(12);
+                }
+                if (value.length > 16) {
+                    value = value.substring(0, 16) + ' ' + value.substring(16);
+                }
+                $(this).val(value);
+            });
+        });
+    </script>
 
 
 </body>

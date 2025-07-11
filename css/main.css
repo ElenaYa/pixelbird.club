@@ -1,6 +1,4 @@
-﻿@import url('../../../../css2');
-@import url('../../../../css2-1');
-@import url('../../../../css2-2');
+﻿
 
 :root {
   --base-button-color: linear-gradient(to right, rgb(226, 27, 147) 0%, rgb(50, 166, 250) 50%, rgb(226, 27, 147) 100%) !important;
