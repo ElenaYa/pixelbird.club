@@ -4,9 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
     <meta name="description" content="Сторінка не знайдена - 404 помилка на сайті Піксельного Птаха. Поверніться на головну сторінку школи розробки ігор або скористайтеся навігацією.">
     <meta name="keywords"
         content="404 помилка, сторінка не знайдена, піксельний птах 404, навігація сайт, школа розробки ігор, геймдев сайт україна">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Сторінка не знайдена - 404 помилка на сайті Піксельного Птаха. Поверніться на головну сторінку школи розробки ігор або скористайтеся навігацією.">
+    <meta property="og:description" content="Сторінка не знайдена - 404 помилка на сайті Піксельного Птаха. Поверніться на головну сторінку школи розробки ігор або скористайтеся навігацією.">
+    <meta property="og:image" content="https://pixelbird.club/images/logo.png">
+    <meta property="og:url" content="https://pixelbird.club/error.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Сторінка не знайдена - 404 помилка на сайті Піксельного Птаха. Поверніться на головну сторінку школи розробки ігор або скористайтеся навігацією.">
+    <meta name="twitter:description" content="Сторінка не знайдена - 404 помилка на сайті Піксельного Птаха. Поверніться на головну сторінку школи розробки ігор або скористайтеся навігацією.">
+    <meta name="twitter:image" content="https://pixelbird.club/images/logo.png">
     <title>Сторінка не знайдена - Піксельний Птах</title>
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
     <link href="src/output.css" rel="stylesheet">
@@ -17,6 +27,11 @@
     <link rel="stylesheet" type="text/css" href="css/megamenu.css">
     <link rel="stylesheet" type="text/css" href="css/shortcodes.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <style>
+    .error-img-full{position:absolute;left:0;top:0;width:100vw;height:100vh;object-fit:cover;z-index:0;}
+    .error-img-gradient{position:absolute;left:0;top:0;width:100vw;height:100vh;z-index:1;background:linear-gradient(to bottom,rgba(30,30,40,0.7) 0%,rgba(30,30,40,0.9) 100%);}
+    .error-message-wrapper{position:relative;z-index:2;}
+    </style>
     
 </head>
 
@@ -85,7 +100,9 @@
         <div class="container-fluid">
             <div class="prt-row-wrapper-bg-layer prt-bg-layer bg-base-dark"></div>
             <!-- section 1 - hero section start -->
-            <div class="prt-bg prt-bgimage-yes bg-img6 h-[100vh]">
+            <div class="prt-bg prt-bgimage-yes bg-img6 h-[100vh]" style="position:relative;overflow:hidden;">
+                <img src="images/error-page-img.jpg" alt="error" class="error-img-full">
+                <div class="error-img-gradient"></div>
                 <div class="error-message-wrapper flex justify-center items-center flex-col h-full">
                     <h1 class="error-message-text text-center text-base-white uppercase">404<br></h1>
                     <h2 class="fs-60 fw-500 lg:pb-[30px] text-center">Ой! Сторінку не знайдено</h2>
@@ -104,7 +121,7 @@
     <!-- site main end -->
 
     <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/jquery-migrate-3.3.2.min.js"></script>
+    <!-- <script src="js/jquery-migrate-3.3.2.min.js"></script> -->
     <script src="js/main.js"></script>
 
 

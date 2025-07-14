@@ -30,6 +30,13 @@ jQuery(function ($) {
 
   "use strict";
 
+  if (window.console && window.console.warn) {
+    var origWarn = window.console.warn;
+    window.console.warn = function(msg) {
+      if (typeof msg === 'string' && msg.indexOf('JQMIGRATE: Migrate is installed') !== -1) return;
+      origWarn.apply(window.console, arguments);
+    };
+  }
     
   /*------------------------------------------------------------------------------*/
   /* Accordion
@@ -147,32 +154,34 @@ $(document).ready(function () {
         $(".title").each(function () {
             const title = $(this);
             const lines = title.find(".line");
-
+            if (!lines.length) return;
             // Animate lines
-            gsap.to(lines, {
-                scrollTrigger: {
-                    trigger: title[0],
-                    start: "top 95%",
-                    toggleActions: "restart restart restart restart"
-                },
-                y: 0,
-                opacity: 1,
-                duration: 2,
-                stagger: 0.3,
-                ease: "expo.out"
-            });
+            if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+                gsap.to(lines, {
+                    scrollTrigger: {
+                        trigger: title[0],
+                        start: "top 95%",
+                        toggleActions: "restart restart restart restart"
+                    },
+                    y: 0,
+                    opacity: 1,
+                    duration: 2,
+                    stagger: 0.3,
+                    ease: "expo.out"
+                });
 
-            // Animate title container
-            gsap.from(title[0], {
-                scrollTrigger: {
-                    trigger: title[0],
-                    start: "top 95%",
-                    toggleActions: "restart restart restart restart"
-                },
-                y: 0,
-                duration: 0.8,
-                ease: "power3.out"
-            });
+                // Animate title container
+                gsap.from(title[0], {
+                    scrollTrigger: {
+                        trigger: title[0],
+                        start: "top 95%",
+                        toggleActions: "restart restart restart restart"
+                    },
+                    y: 0,
+                    duration: 0.8,
+                    ease: "power3.out"
+                });
+            }
         });
     }
 
@@ -181,89 +190,103 @@ $(document).ready(function () {
   /* Basic slick slider
   /*------------------------------------------------------------------------------*/
 
-  $(".slick_slider").slick({
-    speed: 1000,
-    infinite: true,
-    arrows: false,
-    dots: false,
-    autoplay: false,
-    centerMode: false,
-
-    responsive: [{
-
-      breakpoint: 1360,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3
-      }
-    },
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3
-      }
-    },
-    {
-      breakpoint: 680,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 575,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }]
-  });
-
-  $('.testimonial-slider').slick({
-    dots: false,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    centerMode: false,
-    focusOnSelect: false,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 1501,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-        }
+  if ($.fn.slick) {
+    $(".slick_slider").slick({
+      speed: 1000,
+      infinite: true,
+      arrows: false,
+      dots: false,
+      autoplay: false,
+      centerMode: false,
+      responsive: [{
+        breakpoint: 1360,
+        settings: { slidesToShow: 3, slidesToScroll: 3 }
       },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: true,
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 645,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });
+      { breakpoint: 1024, settings: { slidesToShow: 3, slidesToScroll: 3 } },
+      { breakpoint: 680, settings: { slidesToShow: 2, slidesToScroll: 2 } },
+      { breakpoint: 575, settings: { slidesToShow: 1, slidesToScroll: 1 } }]
+    });
+
+    $('.testimonial-slider').slick({
+      dots: false,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      centerMode: false,
+      focusOnSelect: false,
+      arrows: false,
+      responsive: [
+        { breakpoint: 1501, settings: { slidesToShow: 3, slidesToScroll: 3, infinite: true } },
+        { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 2, infinite: true } }
+      ]
+    });
+
+    $(".slick_slider-clients").slick({
+      infinite: true,
+      arrows: false,
+      dots: false,
+      autoplay: true,
+      centerMode: false,
+      autoplaySpeed: 0,
+      speed: 5000,
+      cssEase: "linear",
+      pauseOnHover: true,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      centerPadding: '30px',
+      responsive: [
+        { breakpoint: 1360, settings: { slidesToShow: 4, slidesToScroll: 3 } },
+        { breakpoint: 1024, settings: { slidesToShow: 3, slidesToScroll: 3 } },
+        { breakpoint: 680, settings: { slidesToShow: 2, slidesToScroll: 2 } },
+        { breakpoint: 575, settings: { slidesToShow: 1, slidesToScroll: 1 } }
+      ]
+    });
+
+    $(".slick_slider_rtl").slick({
+      infinite: true,
+      arrows: false,
+      dots: false,
+      autoplay: true,
+      centerMode: false,
+      rtl: true,
+      autoplaySpeed: 0,
+      speed: 5000,
+      cssEase: "linear",
+      pauseOnHover: true,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      centerPadding: '30px',
+      responsive: [
+        { breakpoint: 1860, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+        { breakpoint: 1024, settings: { slidesToShow: 3, slidesToScroll: 1 } },
+        { breakpoint: 680, settings: { slidesToShow: 2, slidesToScroll: 2 } },
+        { breakpoint: 575, settings: { slidesToShow: 1, slidesToScroll: 1 } }
+      ]
+    });
+
+    $('.slick_slider_center').slick({
+      centerMode: true,
+      arrows: true,
+      autoplay: true,
+      slidesToShow: 5,
+      responsive: [
+        { breakpoint: 1870, settings: { arrows: false, autoplay: true, centerMode: true, slidesToShow: 5 } },
+        { breakpoint: 992, settings: { arrows: false, autoplay: true, centerMode: true, slidesToShow: 3 } },
+        { breakpoint: 481, settings: { arrows: false, autoplay: true, centerMode: true, slidesToShow: 1 } }
+      ]
+    });
+
+    $('.vertical_slider.testimonial').slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      autoplay: true,
+      vertical: true,
+      verticalSwiping: true
+    });
+  }
 
 
   /*------------------------------------------------------------------------------*/
@@ -394,34 +417,36 @@ $(document).ready(function(){
     var $animatingElements = $('div.slick-slide[data-slick-index="' + nextSlide + '"]').find('[data-animation]');
     slideanimate($animatingElements);
   });
-  $bannerSlider.slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    fade: true,
-    dots: false,
-    swipe: true,
-    adaptiveHeight: true,
-    responsive: [
+  if ($bannerSlider.length && $.fn.slick) {
+    $bannerSlider.slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      fade: true,
+      dots: false,
+      swipe: true,
+      adaptiveHeight: true,
+      responsive: [
 
-      {
-        breakpoint: 1200,
-        settings: {
-          arrows: false
-        }
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false,
-          autoplay: false,
-          autoplaySpeed: 4000,
-          swipe: true
-        }
-      }]
-  });
+        {
+          breakpoint: 1200,
+          settings: {
+            arrows: false
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            autoplay: false,
+            autoplaySpeed: 4000,
+            swipe: true
+          }
+        }]
+    });
+  }
 
   function slideanimate(elements) {
     var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
@@ -591,149 +616,6 @@ $(document).ready(function(){
   /*-----------------------------------------------------------------------------*/
   /* Slick_slider-clients
   /*------------------------------------------------------------------------------*/
-  $(".slick_slider-clients").slick({
-    infinite: true,
-    arrows: false,
-    dots: false,
-    autoplay: true,
-    centerMode: false,
-    autoplaySpeed: 0,
-    speed: 5000,
-    cssEase: "linear",
-    pauseOnHover: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    centerPadding: '30px',
-
-    responsive: [{
-
-      breakpoint: 1360,
-      settings: {
-        slidesToShow: 4,
-        slidesToScroll: 3
-      }
-    },
-    {
-
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3
-      }
-    },
-    {
-
-      breakpoint: 680,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 575,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }]
-  });
-
-  $(".slick_slider_rtl").slick({
-    infinite: true,
-    arrows: false,
-    dots: false,
-    autoplay: true,
-    centerMode: false,
-    rtl: true,
-    autoplaySpeed: 0,
-    speed: 5000,
-    cssEase: "linear",
-    pauseOnHover: true,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    centerPadding: '30px',
-
-    responsive: [{
-
-      breakpoint: 1860,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1
-      }
-    },
-    {
-
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1
-      }
-    },
-    {
-
-      breakpoint: 680,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 575,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }]
-  });
-
-  // slick_slider_center
-
-
-  $('.slick_slider_center').slick({
-    centerMode: true,
-    arrows: true,
-    autoplay: true,
-    slidesToShow: 5,
-    responsive: [
-      {
-        breakpoint: 1870,
-        settings: {
-          arrows: false,
-          autoplay: true,
-          centerMode: true,
-          slidesToShow: 5
-        }
-      },
-      {
-        breakpoint: 992,
-        settings: {
-          arrows: false,
-          autoplay: true,
-          centerMode: true,
-          slidesToShow: 3
-        }
-      },
-      {
-        breakpoint: 481,
-        settings: {
-          arrows: false,
-          autoplay: true,
-          centerMode: true,
-          slidesToShow: 1
-        }
-      }
-    ]
-  });
-  /*------------------------------------------------------------------------------*/
-  /*  testimonial vertical slider
-  /*------------------------------------------------------------------------------*/
-  $('.vertical_slider.testimonial').slick({
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    autoplay: true,
-    vertical: true,
-    verticalSwiping: true
-  });
 
 
   /*------------------------------------------------------------------------------*/
