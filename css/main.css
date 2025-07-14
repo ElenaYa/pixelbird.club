@@ -120,7 +120,6 @@ font-family: inherit;
   font-weight: 400;
   background-color: transparent;
   text-transform: inherit;
-  /* border: 1px solid rgba(119,119,119,.2); */
   font-size: 15px;
   outline: none;
   line-height: inherit;
@@ -186,7 +185,6 @@ input::placeholder { color: #abb8c3; white-space: nowrap;
 }
 * {
   box-sizing: border-box;
-  /* font-family: "Plus Jakarta Sans", Arial, Helvetica, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: subpixel-antialiased;
   text-rendering: optimizeLegibility;
@@ -240,12 +238,7 @@ h6 {
   font-weight: 400;
   color: var(--base-white);
 }
-/* h1 { font-size: 84px; line-height: 94px; } 
-h2 { font-size: 74px; line-height: 84px; } 
-h3 { font-size: 60px; line-height: 70px; } 
-h4 { font-size: 42px; line-height: 52px; } 
-h5 { font-size: 28px; line-height: 38px; } 
-h6 { font-size: 20px; line-height: 30px; } */
+
 
 .h1,
 .h2,
@@ -817,7 +810,6 @@ label {font-size: 14px;}
 .border-br-rad_5 {border-bottom-right-radius: 30px;}
 .border-bl-rad_5 {border-bottom-left-radius: 30px;}
 
-/* font style css */
 @font-face {
   font-family: 'kanit';
   font-style: italic;
@@ -837,7 +829,6 @@ label {font-size: 14px;}
   src: url(../fonts/Kanit/Kanit-Medium.ttf) format('woff2');
 }
 
-/* social icons css */
 .social-icons {
   list-style:none;
   margin:0;
@@ -885,7 +876,6 @@ label {font-size: 14px;}
   transform-origin: bottom left;
 }
 
-/* checkbox css start */
 .checkbox {
   position: relative;
   appearance: none;
@@ -917,7 +907,6 @@ label {font-size: 14px;}
   opacity: 0.7;
 }
 
-/* image revel animation css */
 
 .image-reveal-block {
   visibility: hidden;
@@ -933,12 +922,7 @@ label {font-size: 14px;}
 }
 
 
-/* common css end  */
 
-/* ===============================================
-    Home page css start
-------------------------*/
-/* Home page - hero section css start */
 .hero-section .hero-section-content1 .hero-section-heading-1 h2{
   font-size: 95px;
   font-weight: 400;
@@ -949,7 +933,6 @@ label {font-size: 14px;}
   height: 750px;
 }
 
-/* Initial state */
 .hero-section .slide-content1 {
   opacity: 0;
   transform: translateY(230px);
@@ -1016,9 +999,7 @@ transform: translateY(0px) ;
   opacity: 1;
 }
 .hero-section .slide-content6-block .slide-content6{margin-top: 50px;margin-left: 85px;overflow-y: hidden;padding-right: 30px;}
-/* Home page - hero section css end */
 
-/* Home page - client section css start */
 .featured-box-client {
   text-align:center
 }
@@ -1096,9 +1077,7 @@ transform: translateY(0px) ;
   margin-left: -20px;
   margin-right: -20px;
 }
-/* Home page - client section css start */
 
-/* home page -table section css start */
 .table-section table{
   display: table !important;
   width: 100%;
@@ -1175,7 +1154,6 @@ transform: translateY(0px) ;
     padding: 15px;
 }
 
-/* home page - gallery section css start */
 
 .gallery-section {
     position: relative;
@@ -1187,10 +1165,7 @@ transform: translateY(0px) ;
 
 
 
-/* ===============================================
-  about us page css start
-------------------------*/
-/* about us page - testimonial section css start */
+
 .testimonial-section .slick-slide{
   margin: 0px 15px;
 }
@@ -1199,10 +1174,6 @@ transform: translateY(0px) ;
   margin-right: -300px;
 }
 
-/* ===============================================
-    contact page css start
-------------------------*/
-/* contact us page - contact form section css start */
 .contact-form-section .contact-form-field{position: relative;;}
 .contact-form-section .contact-form-field input,.contact-form-section .contact-form-field textarea {padding: 11px 11px 11px 50px;color: var(--base-white);}
 .contact-form-section .contact-form-field input::placeholder,.contact-form-section .contact-form-field textarea::placeholder {color: var(--base-bodyfont-color);}
@@ -1226,20 +1197,10 @@ position: absolute;
     -webkit-text-fill-color: blue;
 }
 
-/* ===============================================
-   team - page css start
-------------------------*/
 
-
-
-/* ===============================================
- portfolio page css start
-------------------------*/
 .portfolion-section-main img{height:unset;max-width: unset;}
 
-/* ===============================================
- portfolio-detail page css start
-------------------------*/
+
 .pf-single-content-wrapper .portfolio-description .container {
   width:auto
 }
@@ -1288,7 +1249,6 @@ position: absolute;
 .pf-detailbox-list .pf-details-date .pf-left-details {
   font-size:18px;
   line-height:28px;
-  /* color:var(--body-fonts-color) */
 }
 .layout-style1 .pf-detailbox-list .pf-details-date .pf-right-details {
   font-size:20px;
@@ -1316,14 +1276,7 @@ position: absolute;
   border-bottom:none
 }
 
-/* ===============================================
-   Blog page css start
-------------------------*/
 
-
-/* ===============================================
-   Blog-detail page css start
-------------------------*/
 .blog-summary-section-main blockquote::before {
   position: absolute;
   content: "";
@@ -1394,14 +1347,6 @@ position: absolute;
 .comment-section {margin-top: 65px;
   padding: 34px 40px 36px;}
 
-/* ===============================================
-   service-detail page css start
-------------------------*/
-
-
-/* ===============================================
-  faq page css start
-------------------------*/
 
 .faq-item-overlay-text {
   font-size: 22px;
@@ -1444,9 +1389,6 @@ position: absolute;
 }
 
 
-/* ===============================================
-error css start
-------------------------*/
 .error-message-wrapper img{
   height:100vh;
 }
@@ -1476,9 +1418,6 @@ error css start
 }
 
 
-/* ===============================================
-  Footer css start
-------------------------*/
 .footer .widget ul>li {
   padding:0 0 10px
 }
@@ -1711,3 +1650,7 @@ transition: .5s;
 .service-toggle-btn { cursor:pointer; display:flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,0.08); transition:background 0.2s; }
 .service-toggle-btn:hover { background:rgba(255,255,255,0.18); }
 .service-toggle-btn i { font-size:20px; transition:transform 0.2s; }
+#cookie-popup{box-shadow:0 -2px 16px 0 rgba(0,0,0,0.18);}
+#cookie-popup button{transition:background 0.2s;}
+#cookie-popup button:hover{background:#2563eb;}
+#cookie-popup a{color:#60a5fa;text-decoration:underline;}

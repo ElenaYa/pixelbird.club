@@ -1,4 +1,3 @@
- // home page gallery
 $(document).ready(function () {
     function adjustItemPositions() {
         var $container = $('.gallery-section');
@@ -44,7 +43,6 @@ $(document).ready(function () {
     function initializeGalleryLayout() {
         var $gallery = $('.gallery-section');
 
-        // Make sure it's visible before layout
         $gallery.css('visibility', 'hidden');
 
         $gallery.imagesLoaded({ background: true }, function () {
@@ -53,10 +51,8 @@ $(document).ready(function () {
         });
     }
 
-    // Initial load
     initializeGalleryLayout();
 
-    // Responsive: debounce resize
     let resizeTimer;
     $(window).on('resize', function () {
         clearTimeout(resizeTimer);
@@ -65,7 +61,6 @@ $(document).ready(function () {
         }, 200);
     });
 
-    // Final fallback
     $(window).on('reload', function () {
        initializeGalleryLayout();
     });

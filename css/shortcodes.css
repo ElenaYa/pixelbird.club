@@ -1,49 +1,4 @@
-/** 
-          1. 
 
-          2. Row-Equal-Height
-
-          3. Bg-Layer 
-
-          4. Row-Bg-Image
-
-          6. Section-Title 
-
-          7. sep_holder
-
-          8. Buttons
-
-          9. Icons
-
-          10. Fid
-
-          11. featured-icon-box
-
-          12. Featured-imagebox
-
-          13. Progress-Bar 
-
-          14. Testimonial
-
-          16. Accordion
-
-          17. Wrap-Form
-
-          18. Tab
-
-          19. Boxes-Spacing
-
-          20. Pricing-Plan
-
-          21. Sidebar
-
-          22. floating menu
-
-**/
-
-/* ===============================================
-    1.prt-row
-------------------------*/
 .prt-row {
     padding: 100px 0;
 }
@@ -99,9 +54,7 @@ padding: 75px 0px 40px;
 .prt-row.faq-heading{
     padding:70px 0px 30px;
 }
-/* ===============================================
-    2.Row-Equal-Height
-------------------------*/
+
 .row-equal-height {
     display: -webkit-box;
     display: -webkit-flex;
@@ -119,9 +72,7 @@ padding: 75px 0px 40px;
     flex-wrap: wrap;
 }
 
-/* ===============================================
-    3.Bg-Layer 
-------------------------*/
+
 .prt-bg {
     position: relative;
 }
@@ -167,7 +118,6 @@ padding: 75px 0px 40px;
         padding: 190px 0 154px;
 }
 
-/* unnecessary  */
 .prt-titlebar-wrapper-inner {
     position: relative;
     z-index: 20;
@@ -308,7 +258,6 @@ padding: 75px 0px 40px;
     opacity: .94;
 }
 
-/* banner section  */
 .prt-titlebar-wrapper.prt-bg.prt-bgimage-yes {
   background-image: url('../images/titlebar-img.jpg');
   background-position: center 100%;
@@ -377,7 +326,6 @@ margin-top: -90px;
   opacity: 0.6; 
 }
 
-/* different page heading css */
 .prt-titlebar-wrapper .prt-titlebar-inner-wrapper.contact-banner-section .entry-title{
 padding: 190px 0px 0px;
 
@@ -392,9 +340,6 @@ height: unset;
 
 
 
-/* ===============================================
-    4.Row-Bg-Image  
-------------------------*/
 .bg-img1 {
     background-image: url(../images/bg-images/bg-img-1.jpg);
 background-position: center center;
@@ -441,14 +386,10 @@ background-position: center center;
     background-size: cover;
 }
 
-/* ===============================================
- 6.Section-Title  
-------------------------*/
 .section-title.text_center {
     text-align: center;
 }
 
-/* section-title - style1  */
 .section-title.style1 .title-header .title {
     font-weight: 500;
     font-family: var(--base-headingfont);
@@ -456,7 +397,6 @@ background-position: center center;
 }
 .section-title.style1 .title-header p{font-size: 15px;line-height:25px}
 
-/* section-title - style2  */
 .section-title.style2 .title-header .title {
 font-weight: 500;
 font-family: var(--base-headingfont);
@@ -477,9 +417,6 @@ margin-top: -8px;
 .section-title.style2 .title-header p.title-des{font-size: 15px;line-height:25px}
 
 
-/* ===============================================
-    7.sep_holder
-------------------------*/
 
 .border-1,
 .border-top,
@@ -538,9 +475,7 @@ margin-top: -8px;
 .bg-base-white .prt-horizontal_sep {
     border-top-color: #f1f1f1;
 }
-/* ===============================================
-    8.Buttons
-------------------------*/
+
 .prt-btn {
     display: inline-block;
     text-decoration: none;
@@ -580,9 +515,7 @@ margin-top: -8px;
     }
 }
 
-/** btn-color **/
 
-/* btn - skin color */
 .prt-btn-color-skincolor {
     color: var(--base-skin);
 }
@@ -591,7 +524,6 @@ a.prt-btn-color-skincolor:hover {
     color: var(--base-dark);
 }
 
-/* btn - gradient color */
 .prt-btn-color-gradientcolor {
     transition: background-color 0.3s ease;
     -moz-transition: all .4s ease-in-out;
@@ -618,9 +550,7 @@ a.prt-btn-color-gradientcolor:hover {
     transition: all .4s ease-in-out;
 }
 
-/** btn-color **/
 
-/* btn - skin color */
 .prt-btn.prt-btn-color-skincolor {
     color: #00133b;
     background-color: var(--base-skin);
@@ -631,7 +561,6 @@ a.prt-btn-color-gradientcolor:hover {
     background-color: #00133b;
     color: var(--base-white);
 }
-/* btn - transparent color */
 .prt-btn.prt-btn-color-transparent {
     color: var(--base-white);
     background-color:transparent;
@@ -643,7 +572,6 @@ a.prt-btn-color-gradientcolor:hover {
     background-color: var(--base-white);
     color: var(--base-gray);
 }
-/* btn - Primary color */
 .prt-btn.prt-btn-color-primarycolor {
     color: var(--base-white);
     background-color: var(--base-primary-color);
@@ -654,7 +582,6 @@ a.prt-btn-color-gradientcolor:hover {
     background-color: #00133b;
     color: var(--base-white);
 }
-/* btn - gradient color */
 .prt-btn-color-gradientcolor {
     transition: background-color 0.3s ease;
     -moz-transition: all .4s ease-in-out;
@@ -681,7 +608,6 @@ a.prt-btn-color-gradientcolor:hover {
     transition: all .4s ease-in-out;
 }
 
-/* btn - white color */
 .prt-btn-color-whitecolor {
     color: var(--base-white);
 }
@@ -690,7 +616,6 @@ a.prt-btn-color-gradientcolor:hover {
     color: var(--base-white);
 }
 
-/* btn with bg color */
 .prt-btn.prt-btn-style-border.prt-btn-color-dark:hover,
 .prt-btn.prt-btn-style-fill.prt-btn-color-white:hover {
     background-color: var(--base-skin);
@@ -698,7 +623,6 @@ a.prt-btn-color-gradientcolor:hover {
     color: var(--base-white);
 }
 
-/* btn with gray color */
 .prt-btn.prt-btn-style-fill.prt-btn-color-graycolor {
     background-color: var(--base-gray);
     border-color: var(--base-gray);
@@ -747,7 +671,6 @@ a.prt-btn-color-gradientcolor:hover {
     color: var(--base-dark);
 }
 
-/** btn-with-icon **/
 .prt-btn i {
     display: inline-block;
     vertical-align: middle;
@@ -767,7 +690,6 @@ a.prt-btn-color-gradientcolor:hover {
     margin-left: 0;
 }
 
-/** btn-size-xs **/
 .prt-btn.prt-btn-size-xs {
     font-size: 15px;
     line-height: 25px;
@@ -791,7 +713,6 @@ a.prt-btn-color-gradientcolor:hover {
     margin-left: 0;
 }
 
-/** btn-size-sm **/
 .prt-btn.prt-btn-size-sm {
     font-size: 15px;
     line-height: 15px;
@@ -946,7 +867,7 @@ a.prt-btn-color-gradientcolor:hover {
     transition: all 0.1s ease 0s;
 }
 
-/* play-btn / play-icon */
+
 .prt-play-icon {
     color: var(--base-white);
     display: block;
@@ -1063,9 +984,6 @@ i.fa-play {
 }
 
 
-/* ===============================================
-    9.Icons
-------------------------*/
 .prt-icon {
     display: inline-block;
     vertical-align: middle;
@@ -1238,7 +1156,6 @@ i.fa-play {
 }
 
 
-/* prt-list-style-icon */
 .prt-list {
     list-style: none;
     padding: 0;
@@ -1376,7 +1293,6 @@ i.fa-play {
 }
 
 
-/* prt-video-icon */
 .prt-video-icon .prt-icon.prt-icon_element-size-md {
     height: 98px;
     width: 98px;
@@ -1396,9 +1312,6 @@ i.fa-play {
     top: 50%;
 }
 
-/* ===============================================
-    10.Fid
-------------------------*/
 .inside {
     position: relative;
     transition: all .4s;
@@ -1446,15 +1359,13 @@ i.fa-play {
     padding-top: 0;
 }
 
-/* style1 */
 .prt-fid-view-style1 {
     display: block;
     padding: 0
 }
 
 .prt-fid-view-style1.inside h4 span {
-    /* font-size: 60px;
-    line-height: 76px; */
+   
     font-weight: 500;
 }
 
@@ -1499,9 +1410,7 @@ i.fa-play {
     font-weight: 400;
 }
 
-/* ===============================================
-    11.featured-icon-box ( only contents )
-------------------------*/
+
 .featured-icon-box {
     position: relative;
 }
@@ -1573,7 +1482,6 @@ section {
    }
 
 
-/* iconbox - style1 */
 .featured-icon-box.style1 {
     overflow: visible;
     position: relative;
@@ -1627,7 +1535,6 @@ section {
     }
 }
 
-/* style 2  */
 .featured-iconbox.style2 .featured-iconbox-inner {
   padding-top: 40px;
   background-color:transparent;
@@ -1660,9 +1567,6 @@ section {
   font-size: 27px;
 }
 
-/* ===============================================
-    12.featured-imagebox ( contents with image)
-------------------------*/
 .featured-imagebox {
     margin: 0px 0;
 }
@@ -1712,7 +1616,6 @@ div:hover>.prt-box-view-content-inner:before {
     margin-bottom: 0;
 }
 
-/* service -style1 */
 .featured-imagebox-service.style1 .featured-box-title h4{
     margin-bottom: 15px;
 }
@@ -1819,7 +1722,6 @@ article.featured-box.featured-box-service.featured-imagebox-service.style1 {
 }
 
 
-/* portfolio - style1  */
  .featured-imagebox-portfolio.style1 .featured-post-item-inner {
   position:relative;
   display:inline-block
@@ -1942,7 +1844,6 @@ article.featured-box.featured-box-service.featured-imagebox-service.style1 {
   transform:translateY(0)
 }
 
-/* blog - style1 */
 .featured-imagebox-blog.style5 .prt-featured-wrapper.prt-featured-wrapper-post img,
 .featured-imagebox-blog.style5 .prt-featured-wrapper.prt-featured-wrapper-post {
   border-radius:10px;
@@ -2038,7 +1939,6 @@ article.featured-box.featured-box-service.featured-imagebox-service.style1 {
   line-height: 32px;
 }
 
-/* testimonial - style1 */
  .featured-box-testimonial.style1 .featured-box-content {
   padding:33px 40px 40px;
   overflow:visible;
@@ -2183,7 +2083,6 @@ article.featured-box.featured-box-service.featured-imagebox-service.style1 {
  display: flex;
 }
 
-/* stepbox- style1 */
 
 .featured-imagebox-stepbox-inner:first-of-type .featured-imagebox-content {
   padding: 0px 0px 35px 0px;
@@ -2238,7 +2137,6 @@ article.featured-box.featured-box-service.featured-imagebox-service.style1 {
   width:100%
 }
 
-/* team -style1 */
 .featured-imagebox-team.style2 .featured-box-title h4 a:hover {
   color:#fff
 }
@@ -2294,9 +2192,7 @@ article.featured-box.featured-box-service.featured-imagebox-service.style1 {
 }
 
 
-/* ===============================================
-    13.Progress-Bar
-------------------------*/
+
 .prt-progress-bar {
     position: relative;
 }
@@ -2306,7 +2202,6 @@ article.featured-box.featured-box-service.featured-imagebox-service.style1 {
 }
 
 .prt-progress-bar .progressbar-title {
-    /* display: block; */
     margin-bottom: 10px;
     font-size: 16px;
     font-weight: 500;
@@ -2368,7 +2263,6 @@ background-image: linear-gradient(#131313, #131313), linear-gradient(to right, #
     background-color: #fff;
 }
 
-/* style1 */
 .prt-progress-bar.style1:not(:last-child) {
     margin-bottom: 24px;
 }
@@ -2421,9 +2315,6 @@ background-image: linear-gradient(#131313, #131313), linear-gradient(to right, #
 }
 
 
-/* ===============================================
-    14.Testimonial
-------------------------*/
 .testimonials {
     position: relative;
 }
@@ -2475,7 +2366,6 @@ background-image: linear-gradient(#131313, #131313), linear-gradient(to right, #
     color: #ffba00;
 }
 
-/* testimonial-onlyimg */
 .testimonial-onlyimg.style1 img {
     width: 150px;
     height: 150px;
@@ -2491,7 +2381,6 @@ background-image: linear-gradient(#131313, #131313), linear-gradient(to right, #
     margin-left: -110px;
 }
 
-/* prt-testimonial-box-view-style1 */
 .prt-testimonial-box-view-style1 .testimonial-img img {
     width: 114px;
     height: 114px;
@@ -2544,9 +2433,7 @@ background-image: linear-gradient(#131313, #131313), linear-gradient(to right, #
     color: var(--base-white);
 }
 
-/* ===============================================
-    16.Accordion
-------------------------*/
+
 .wrap-acadion .accordion {
     margin-top: 15px;
 }
@@ -2628,7 +2515,6 @@ background-image: linear-gradient(#131313, #131313), linear-gradient(to right, #
     text-align: center;
 }
 
-/* prt-style-classic */
 .accordion .toggle.prt-toggle_style_classic {
     margin: 0;
     padding: 0;
@@ -2673,7 +2559,6 @@ background-image: linear-gradient(#131313, #131313), linear-gradient(to right, #
     transform: rotate(-90deg);
 }
 
-/* prt-style-default */
 .accordion .toggle.prt-toggle_style_default {
     padding: 0;
     border: 0;
@@ -2755,9 +2640,6 @@ font-family: var(--base-bodyfont);
 }
 
 
-/* ===============================================
-    17.Wrap-Form
-------------------------*/
 .wrap-form label {
     width: 100%;
     margin: 0;
@@ -2778,7 +2660,6 @@ font-family: var(--base-bodyfont);
     z-index: 1;
 }
 
-/* contactform */
 .wrap-form.contact_form span.text-input i {
     position: absolute;
     left: 20px;
@@ -2916,9 +2797,7 @@ font-family: var(--base-bodyfont);
     padding: 9px 20px 7px;
 }
 
-/* ===============================================
-    18.Tab
-------------------------*/
+
 .prt-tabs ul.tabs {
     width: 100%;
     padding: 0;
@@ -2985,9 +2864,6 @@ font-family: var(--base-bodyfont);
     margin-top: 30px;
 }
 
-/* ===============================================
-    19.Boxes-Spacing
-------------------------*/
 .row.prt-boxes-spacing-30px,
 .prt-boxes-spacing-30px {
     margin: 0 -20px;
@@ -3055,10 +2931,6 @@ font-family: var(--base-bodyfont);
     outline: 0;
 }
 
-/* ===============================================
-    21.Sidebar
-------------------------*/
-/* blog left sec section css start  */
 .sidebar {
     padding: 30px;
     margin-bottom: 30px;
@@ -3085,7 +2957,6 @@ font-family: var(--base-bodyfont);
     margin-bottom: 23px;
 }
 
-/* widget-search */
 #sidebar .widget #search-form button {
     padding-left: 25px;
 }
@@ -3107,7 +2978,6 @@ font-family: var(--base-bodyfont);
    padding: 19px 20px 19px 20px;
 }
 
-/* widget-categories */
 #sidebar .widget .category-item {
     display: flex;
     justify-content: space-between;
@@ -3152,7 +3022,6 @@ font-family: var(--base-bodyfont);
     margin-bottom: 2px;
 }
 
-/* widget-tagcloud */
 #sidebar .widget .tagcloud a:hover {
     background-color: var(--base-skin);
     transition: .5s;
@@ -3183,7 +3052,6 @@ font-family: var(--base-bodyfont);
     position: relative;
 }
 
-/* widget - contact */
 #sidebar .widget .team-detail-sidebar {
     border-radius: 25px;
     display: block;
@@ -3216,7 +3084,6 @@ font-family: var(--base-bodyfont);
     transition: all .3s ease 0s;
 }
 
-/* pagination */
 .featured-pagination .page-numbers {
   text-align:center;
   display:inline-block;
@@ -3359,7 +3226,6 @@ font-family: var(--base-bodyfont);
     writing-mode: vertical-rl;
 }
 
-/* news-section*/
 .news-section .section-title h2 {
     font-size: 140px;
     line-height: 110px;
@@ -3414,7 +3280,6 @@ font-family: var(--base-bodyfont);
     margin-bottom: 4px;
 }
 
-/* cursor */
 .prt-cursor {
     position: fixed;
     top: 0;
@@ -3947,11 +3812,7 @@ ul.map-links li a:hover {
     }
 }
 
-/* ===============================================
-    20.Prt single img
-------------------------*/
 
-/*prt-single-img-1*/
 
 .prt_single_image-wrapper {
     position: relative;
@@ -4167,7 +4028,6 @@ text-align: center;
   cursor: pointer;
   color: rgba(0,0,0,.5);
 }
-/* to top css start */
 #totop {
     font-weight: 900;
     color: #fff;
@@ -4217,9 +4077,7 @@ text-align: center;
     animation: jump 4s infinite;
 }
 
-/* ===============================================
- floating menu
-------------------------*/
+
 .prt_floting_customsett {
     position: fixed;
     top: 50%;

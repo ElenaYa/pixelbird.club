@@ -1,8 +1,5 @@
     
-    /*------------------------------------------------------------------------------*/
-        /* Image reveal animation
-        /*------------------------------------------------------------------------------*/
-
+    
         let revealContainers = document.querySelectorAll(".image-reveal");
 
         revealContainers.forEach((imageContainer) => {
@@ -32,7 +29,6 @@
             });
         });
 
-        // Second block
         let revealContainers1 = document.querySelectorAll(".image-reveal-block");
 
         revealContainers1.forEach((imageContainer1) => {

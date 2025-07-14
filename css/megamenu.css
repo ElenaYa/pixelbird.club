@@ -414,22 +414,7 @@ nav.main-menu ul.menu li ul.mega-submenu li:hover a {
     color: var(--base-secondary-color);
     transition: .5s;
   }
-  /* nav.main-menu
-    ul.menu
-    > li.mega-menu-item:first-child
-    > .nav-first-link::after,
-  nav.main-menu
-    ul.menu
-    > li.mega-menu-item:nth-child(2)
-    > a.mega-menu-link::after {
-    font-family: flaticon_ailabflow;
-    content: "\f116";
-    float: right;
-    font-size: 16px;
-    margin-left: 10px;
-    top: 0;
-    content: "\f116";
-  } */
+
   nav.main-menu
     .mega-menu-item
     .megamenu-content

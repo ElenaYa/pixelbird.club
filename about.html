@@ -31,29 +31,24 @@
 
 <body class="page">
 
-    <!-- header start -->
     <header id="masthead" class="header w-full">
-        <!-- site-header-menu -->
         <div id="site-header-menu" class="site-header-menu text-light">
             <div class="site-header-menu-inner prt-stickable-header">
                 <div class="container-fluid">
                     <div class="site-header-menu-wrapper w-full">
                         <div>
-                            <!--site-navigation -->
                             <div class="site-navigation flex items-center justify-between">
-                                <!-- site-branding -->
                                 <div class="site-branding">
                                     <a aria-label="Go to home page" class="logo-wrapper" href="index.html">
                                         <span><img loading="lazy" decoding="async" src="images/logo.png" alt="Піксельний Птах логотип" class="logo-img"></span>
                                     </a>
-                                </div><!-- site-branding end -->
+                                </div>
                                 <div class="menu-link">
                                     <div class="btn-show-menu-mobile menubar menubar--squeeze">
                                         <span class="menubar-box">
                                             <span class="menubar-inner"></span>
                                         </span>
                                     </div>
-                                    <!-- menu -->
                                     <nav class="main-menu menu-mobile" id="menu">
                                         <ul class="menu">
                                            
@@ -71,30 +66,25 @@
                                           
                                         </ul>
                                     </nav>
-                                </div><!-- menu end -->
+                                </div>
                                 <div class="nav-icons relative flex items-center flex-row">
-                                    <!-- Dropdown menus for user actions -->
                                     <div class="relative">
                                         <a class="flex items-center prt-btn prt-btn-color-transparent prt-btn-size-xs  prt-btn-shape-round" href="contact.html" id="user-login-btn" role="button">
                                             зв'язатись з нами
                                         </a>
                                     </div>
                                 </div>
-                            </div><!-- site-navigation end-->
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- site-header-menu end-->
     </header>
-    <!-- header end -->
-
-    <!-- site main start -->
+   
     <div class="site-main  prt-bg prt-bgimage-yes bg-img3">
 
 
-        <!-- banner section start -->
         <div class="prt-titlebar-wrapper prt-bg  bg-base-dark  prt-bgimage-yes  about-us-heading">
             <div class="prt-row-wrapper-bg-layer prt-bg-layer"></div>
             <div class="prt-titlebar entry-header">
@@ -113,10 +103,7 @@
                 </div>
             </div>
         </div>
-        <!-- banner section end -->
-
-
-        <!-- section 1 - client section  start -->
+     
         <section class="prt-row  padding_bottom_zero-section client-section-main  mb-[-45px] md:mb-[-55px]">
             <div class="container">
                 <div class="client-section-wrapper">
@@ -235,10 +222,7 @@
                 </div>
             </div>
         </section>
-        <!-- section 1 - client section end -->
-
-
-        <!-- section 2 - about us section start -->
+      
         <section class="prt-row">
             <div class="container">
                 <div class="flex-wrap flex w-full">
@@ -299,7 +283,7 @@
                 </div>
             </div>
         </section>
-        <!-- section 2 -  about us section end -->
+     
 
         <section class="prt-row blog-summary-section-main">
             <div class="container">
@@ -358,7 +342,6 @@
             </div>
         </section>
 
-        <!-- section 3 - stepbox section start  -->
         <section class="prt-row prt-bg prt-bgimage-yes bg-img1 stepbox-section">
             <div class="container">
                 <div class="stepbox-section-wrapper">
@@ -432,10 +415,7 @@
                 </div>
             </div>
         </section>
-        <!-- section 3 -  stepbox section end -->
-
-
-        <!-- section 4 -  testimonial section start -->
+   
         <section class="prt-row testimonial-section">
             <div class="container-fluid">
                 <div class="container">
@@ -577,15 +557,13 @@
                 </div>
             </div>
         </section>
-        <!-- section 4 - testimonial section end -->
+     
 
     
 
 
     </div>
-    <!-- site main end -->
-
-     <!-- footer start -->
+ 
      <footer class="site-footer">
         <div class="footer_inner_wrapper footer prt-bg prt-bgimage-yes bg-img1">
             <div class="site-footer-wrapper">
@@ -695,17 +673,60 @@
             </div>
         </div>
     </footer>
-    <!-- footer end -->
-
-
-    <!-- back-to-top start -->
+   
     <a id="totop" href="#top">
         <i class="icon-angle-up"></i>
     </a>
-    <!-- back-to-top end -->
+    <script>
+        window.addEventListener('load', function() {
+          const cookie = document.cookie.split('; ').find(row => row.startsWith('cookie_consent='));
+          if (!cookie) {
+            const popup = document.createElement('div');
+            popup.id = 'cookie-popup';
+            popup.style.position = 'fixed';
+            popup.style.bottom = '0';
+            popup.style.left = '0';
+            popup.style.width = '100%';
+            popup.style.background = '#1f2937';
+            popup.style.color = '#f9fafb';
+            popup.style.padding = '1rem';
+            popup.style.zIndex = '9999';
+            popup.style.display = 'flex';
+            popup.style.flexWrap = 'wrap';
+            popup.style.justifyContent = 'space-between';
+            popup.style.alignItems = 'center';
+            popup.style.fontFamily = 'sans-serif';
+            popup.style.fontSize = '14px';
+        
+            popup.innerHTML = `
+              <span style="flex: 1 1 auto; min-width: 200px;">Цей сайт використовує cookies для покращення роботи. <a href="cookie-policy.html" style="text-decoration:underline; color:#60a5fa;">Детальніше</a></span>
+              <div style="flex-shrink: 0; display: flex; gap: 0.5rem; margin-top: 0.5rem;">
+                <button id="cookie-accept" style="padding: 0.5rem 1rem; background: #3b82f6; color: #fff; border: none; border-radius: 4px; cursor: pointer;">Прийняти</button>
+                <button id="cookie-reject" style="padding: 0.5rem 1rem; background: #6b7280; color: #fff; border: none; border-radius: 4px; cursor: pointer;">Скасувати</button>
+              </div>
+            `;
+        
+            document.body.appendChild(popup);
+        
+            document.getElementById('cookie-accept').addEventListener('click', function() {
+              const d = new Date();
+              d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
+              document.cookie = 'cookie_consent=1; expires=' + d.toUTCString() + '; path=/';
+              popup.style.display = 'none';
+            });
+        
+            document.getElementById('cookie-reject').addEventListener('click', function() {
+              const d = new Date();
+              d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
+              document.cookie = 'cookie_consent=0; expires=' + d.toUTCString() + '; path=/';
+              popup.style.display = 'none';
+            });
+          }
+        });
+        </script>
+        
 
     <script src="js/jquery-3.7.1.min.js"></script>
-    <!-- <script src="js/jquery-migrate-3.3.2.min.js"></script> -->
     <script src="js/gsap.min.js"></script>
     <script src="js/Scrolltrigger.js"></script>
     <script src="js/slick.min.js"></script>

@@ -29,7 +29,6 @@
             });
         });
 
-        // Second block
         let revealContainers1 = document.querySelectorAll(".image-reveal-block");
 
         revealContainers1.forEach((imageContainer1) => {
@@ -56,7 +55,6 @@
             });
         });
 
-         // portfolio page gallery
         $(document).ready(function () {
         function adjustItemPositions() {
         var $container = $('.gallery-section');
@@ -65,7 +63,6 @@
         var gutter = 30;
       
 
-        // Determine responsive pattern
         let layoutPattern;
         if (window.innerWidth <= 768) {
             layoutPattern = [1]; 
@@ -82,14 +79,12 @@
             position: 'absolute'
         });
 
-        // Loop through items, repeating the layout pattern
         while (itemIndex < $items.length) {
             for (let patternIndex = 0; patternIndex < layoutPattern.length && itemIndex < $items.length; patternIndex++) {
                 let itemsInRow = layoutPattern[patternIndex];
 
-                // Use fixed width for 2-column rows, calculated width for 3-column rows
                 let itemWidth = itemsInRow === 2
-                    ? $items.first().outerWidth(true)  // or replace with a fixed value like 600
+                    ? $items.first().outerWidth(true)  
                     : Math.floor((containerWidth - gutter * (itemsInRow - 1)) / itemsInRow);
 
 
@@ -100,7 +95,6 @@
                     let $item = $($items[itemIndex]);
                     let left = j * (itemWidth + gutter);
 
-                    // Optional: tag items with row type classes
                     $item.removeClass('in-two-col-row in-three-col-row');
                     $item.addClass(itemsInRow === 2 ? 'in-two-col-row' : 'in-three-col-row');
 
@@ -110,7 +104,7 @@
                         top: topOffset + 'px'
                     });
 
-                    $item[0].offsetHeight; // force reflow
+                    $item[0].offsetHeight; 
 
                     let itemHeight = $item.outerHeight(true);
                     if (itemHeight > maxHeightInRow) {
@@ -124,14 +118,12 @@
             }
         }
 
-        // Update container height
         $container.css({
             position: 'relative',
             height: topOffset + 'px'
         });
     }
 
-    // Utility to wait until all images are loaded
     function imagesLoaded($container, callback) {
         var $imgs = $container.find('img');
         var loaded = 0;
@@ -152,7 +144,6 @@
         });
     }
 
-    // Ensure all images are actually rendered
     function imagesLoaded($container, callback) {
         const $imgs = $container.find('img');
         let loaded = 0;
@@ -171,7 +162,6 @@
                 $(img).on('load error', function () {
                     loaded++;
                     if (loaded === $imgs.length) {
-                        // Slight delay to let layout settle
                         setTimeout(callback, 50);
                     }
                 });
@@ -185,10 +175,8 @@
         });
     }
 
-    // Initial layout
     initLayout();
 
-    // Debounced resize
     let resizeTimer;
     $(window).on('resize', function () {
         clearTimeout(resizeTimer);
@@ -197,7 +185,6 @@
         }, 200);
     });
 
-    // Final fallback
     $(window).on('load', function () {
         initLayout();
     });
