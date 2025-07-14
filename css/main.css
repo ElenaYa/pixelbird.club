@@ -386,7 +386,7 @@ textarea:focus {
   color: var(--base-headingfont-color);
 }
 .container-fluid {
-  max-width: 1905px;
+  max-width: 1200px;
   margin: 0px auto;
 }
 .container {
@@ -395,7 +395,7 @@ margin-left: auto;
   width: 100%;
  padding-left: calc(0.9375rem * 1);
  padding-right: calc(0.9375rem * 1);
- max-width: 1330px;
+ max-width: 1200px;
 }
 .mt-100 {
   margin-top: 100px;
@@ -1708,3 +1708,6 @@ transition: .5s;
 .footer .mailchimp-inputbox input{color:var(--base-white)}
 .footer .mailchimp-inputbox button {margin-top: 8px;}
 .footer .mailchimp-inputbox input::placeholder{color: var(--base-bodyfont-color);font-size: 16px;line-height: 26px;}
+.service-toggle-btn { cursor:pointer; display:flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,0.08); transition:background 0.2s; }
+.service-toggle-btn:hover { background:rgba(255,255,255,0.18); }
+.service-toggle-btn i { font-size:20px; transition:transform 0.2s; }

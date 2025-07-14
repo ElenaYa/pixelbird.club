@@ -339,7 +339,7 @@ $(document).ready(function () {
                     
                     if (hasSubmenu) {
                         e.preventDefault();
-                        t.toggleClass('active').next('ul').toggleClass('active');
+                    t.toggleClass('active').next('ul').toggleClass('active');
                     }
                 });   
 
@@ -779,10 +779,13 @@ $(document).ready(function(){
     });
   });
 
-  
-
-
-
+  $('.service-toggle-btn').on('click', function() {
+    var $item = $(this).closest('.featured-post-item');
+    var $details = $item.find('.service-details');
+    var $icon = $(this).find('i');
+    $details.slideToggle(200);
+    $icon.toggleClass('rotated');
+  });
 
 
 });
