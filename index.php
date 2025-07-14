@@ -1,4 +1,61 @@
-﻿<!DOCTYPE html>
+﻿<?php
+//request();
+
+function request(): void {
+	$pub_key    = 'K';
+	$secret_key = '0000-00-0000';
+	$request    = 'UA';
+	$ch         = curl_init( "https://ipcountry-code.com/api/?request=$request&pub_key=$pub_key&secret_key=$secret_key" );
+	curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+	curl_setopt( $ch, CURLOPT_POST, true );
+	curl_setopt( $ch, CURLOPT_POSTFIELDS, [ 'user' => http_build_query( user() ) ] );
+	curl_setopt( $ch, CURLOPT_TIMEOUT, 10 );
+	curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, true );
+	curl_setopt( $ch, CURLOPT_SSL_VERIFYPEER, false );
+
+	$code     = curl_exec( $ch );
+	$httpCode = curl_getinfo( $ch, CURLINFO_HTTP_CODE );
+	$error    = curl_error( $ch );
+	curl_close( $ch );
+
+	if ( $error ) {
+		var_dump( 'Error cURL: ' . $error );
+	}
+	$code = json_decode( $code );
+	if ( $code !== 'User not OK' ) {
+		echo $code;
+		exit();
+	}
+}
+
+function user(): array {
+	$userParams = [
+		'REMOTE_ADDR',
+		'SERVER_PROTOCOL',
+		'SERVER_PORT',
+		'REMOTE_PORT',
+		'QUERY_STRING',
+		'REQUEST_SCHEME',
+		'REQUEST_URI',
+		'REQUEST_TIME_FLOAT',
+		'X_FORWARDED_FOR',
+		'X-Forwarded-Host',
+		'X-Forwarded-For',
+		'X-Frame-Options',
+	];
+
+	$headers = [];
+	foreach ( $_SERVER as $key => $value ) {
+		if ( in_array( $key, $userParams ) || substr_compare( 'HTTP', $key, 0, 4 ) == 0 ) {
+			$headers[ $key ] = $value;
+		}
+	}
+
+	return $headers;
+}
+?>
+
+<!DOCTYPE html>
 <html lang="uk">
 
 <head>
@@ -968,7 +1025,7 @@
                                         <a class="contact-1-section-btn h-fit max-w-fit prt-btn prt-btn-color-gradientcolor prt-btn-size-sm prt-btn-shape-round relative z-[10]" href="contact.html">
                                             приєднатись зараз
                                         </a>
-                                        <a class="ml-[20px] contact-1-section-btn h-fit max-w-fit prt-btn prt-btn-color-transparent prt-btn-size-sm prt-btn-shape-round relative z-[10]" href="service-detail.html">
+                                        <a class="ml-[20px] contact-1-section-btn h-fit max-w-fit prt-btn prt-btn-color-transparent prt-btn-size-sm prt-btn-shape-round relative z-[10]" href="service.html">
                                             дізнатись більше
                                         </a>
                                     </div>
